@@ -29,3 +29,7 @@ Refactor sangat diperlukan karena pada fungsi handle_connection terdapat bloater
 #### Reflection 4
 
 Pada kode tersebut, kita mensimulasikan kondisi ketika server yang kita punya mengalami load yang cukup banyak hingga menunda tampilan html selama 5 detik. Hal ini menjelaskan ketika thread utama sedang digunakan (sleep) maka tidak bisa melakukan eksekusi lainnya.
+
+#### Reflection 5
+
+Thread pool adalah sekumpulan thread yang sudah siap dan menunggu untuk menyelesaikan suatu task tertentu. Misalnya ketika program menerima task baru, maka salah satu dari thread yang ada pada pool tersebut akan digunakan untuk menyelesaikannya. Thread yang lainnya tetap bisa menjelankan tugas lain meskipun salah satu thread sedang menjalankan suatu proses tertentu. Jika thread sudah selesai menyelesaikan suatu task, ia akan kembali pada pool dan akan menunggu task selanjutnya.
