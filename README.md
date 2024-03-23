@@ -23,3 +23,5 @@ Pada function handle_connection yang telah diperbarui, kita menggunakan fs (file
 ![Commit 3 screen capture](/assets/images/commit3.png)
 
 Dalam kode yang telah diperbaiki untuk memvalidasi http_request dari browser user. Saya menghandle agar selain request yang berupa `GET / HTTP/1.1` akan ditolak dan di lempar ke halaman error 404.
+
+Refactor sangat diperlukan karena pada fungsi handle_connection terdapat bloaters berupa method yang terlalu panjang yang merupakan duplikasi. Ini diatasi dengan mendekomposisi conditional yang ada.
