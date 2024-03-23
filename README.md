@@ -25,3 +25,7 @@ Pada function handle_connection yang telah diperbarui, kita menggunakan fs (file
 Dalam kode yang telah diperbaiki untuk memvalidasi http_request dari browser user. Saya menghandle agar selain request yang berupa `GET / HTTP/1.1` akan ditolak dan di lempar ke halaman error 404.
 
 Refactor sangat diperlukan karena pada fungsi handle_connection terdapat bloaters berupa method yang terlalu panjang yang merupakan duplikasi. Ini diatasi dengan mendekomposisi conditional yang ada.
+
+#### Reflection 4
+
+Pada kode tersebut, kita mensimulasikan kondisi ketika server yang kita punya mengalami load yang cukup banyak hingga menunda tampilan html selama 5 detik. Hal ini menjelaskan ketika thread utama sedang digunakan (sleep) maka tidak bisa melakukan eksekusi lainnya.
